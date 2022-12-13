@@ -22,18 +22,18 @@ ANALISI
 const sumElement = document.getElementById('sum');
 
 
-// 2 - Dichiaro una variabile iin cui andrò a inserire la somma dei numeri.
-let numbersContainer = 0;
+// 2 - Dichiaro una variabile in cui andrò a inserire la somma dei numeri.
+let numbersSum = 0;
 
 
 /* 3e4 - Chiedo all'utente 10 volte di inserire un numero
          e ne calcolo la somma */
 for (let i = 1; i <= 10; i++) {
     const userNumbers = parseInt(prompt("Inserisci un numero").trim());
-    numbersContainer += userNumbers;
+    numbersSum += userNumbers;
 }
 
 // 5 - Stampa in pagina
-console.log(numbersContainer);
-sumElement.innerText = numbersContainer;
+console.log(numbersSum);
+sumElement.innerText = numbersSum;
 
