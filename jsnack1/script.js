@@ -25,15 +25,24 @@ const sumElement = document.getElementById('sum');
 // 2 - Dichiaro una variabile in cui andrò a inserire la somma dei numeri.
 let numbersSum = 0;
 
+let isValid = true;
 
 /* 3e4 - Chiedo all'utente 10 volte di inserire un numero
          e ne calcolo la somma */
 for (let i = 1; i <= 10; i++) {
     const userNumbers = parseInt(prompt("Inserisci un numero").trim());
-    numbersSum += userNumbers;
+    console.log(userNumbers);
+    if (isNaN(userNumbers)){
+        isValid = false;
+        alert('Hai inserito valori non validi');
+    } else {
+        numbersSum += userNumbers; 
+    } 
+      
+    
 }
 
 // 5 - Stampa in pagina
-console.log(numbersSum);
-sumElement.innerText = numbersSum;
+console.log(`La somma dei numeri è uguale a ${numbersSum}`);
+sumElement.innerText = `La somma dei numeri è uguale a ${numbersSum}`;
 
